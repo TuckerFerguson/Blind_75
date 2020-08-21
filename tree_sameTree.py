@@ -20,3 +20,26 @@ class Solution(object):
         :type q: TreeNode
         :rtype: bool
         """
+        #recursive way
+        def isSameTree(self, p, q):
+            if not p and not q :
+                return True
+            if not q or not p :
+                return False
+            if p.val != q.val:
+                return False
+            return self.isSameTree(p.left,q.left) and self.isSameTree(p.right,q.right)
+            
+            
+            
+                   
+            
+               
+            
+            
+        #2) use same method on both TreeNodes
+
+        #3) compare each node as you index into tree, compare
+
+        #4) on unequality terminate, return false
+        #5) if both trees indexed entirely return true

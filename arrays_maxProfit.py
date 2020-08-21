@@ -19,4 +19,16 @@ class Solution(object):
         :rtype: int
         """
         self.priceList = prices
+        maxVal = 0
+        for i,price in enumerate(self.priceListprices):
+            priceDict[i] = price
+            currentStock = price
+            for pr in prices[i:]:
+                if maxVal < pr - price :
+                    maxVal = pr - price
+        return maxVal
+
+
+
         
+    
