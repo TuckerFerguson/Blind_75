@@ -6,7 +6,6 @@
 #
 # Link: https://leetcode.com/problems/merge-k-sorted-lists/
 #
-# Definition for singly-linked list.
 # class Solution(object):
 #    def mergeKLists(self, lists):
 #        """
