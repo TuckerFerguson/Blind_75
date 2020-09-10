@@ -17,25 +17,30 @@ class Solution(object):
         :type root: TreeNode
         :rtype: TreeNode
         """
-        curr = root
         queue = []
-        if(curr.left or curr.right):
-            queue.append(curr)
-            while len(queue)!= 0:
-                if curr.left :
-                    curr = curr.left
-                    queue.append(curr)
-                elif curr.right :
-                    queue.append(curr)
-                    curr = curr.right
-                else:
-                    curr = queue.pop(0)
-                    print(curr.val)
-                    if curr == root:
-                        return curr
-                    else:
-                        curr.left,curr.right = curr.right,curr.left
+        self.root = root
+     #case 0) is root ?   y: cont   n: return []
+        if(root is []):
+            return []
         else:
-            return None
+            queue.append(root)
+            while len(queue) != 0:
+     #case 4) there is a left and right
+                root = queue.pop(0)
+                root.left,root.right = root.right,root.left
+                if root.left:
+                    queue.append(root)                    
+                if root.right:
+                    queue.append(root.right)
+            return root
+          
 
-        #currently returns exact same tree (not getting into logiclm,)
+        
+                    
+     
+   
+
+
+            
+
+     

@@ -22,4 +22,23 @@ class Solution(object):
         :type prerequisites: List[List[int]]
         :rtype: bool
         """
+        #creates a dict out of the prequisites 
+        reqDict = {}
         
+        for req in prerequisites:
+            
+            #TO DO I want a key with list value of all preqs that involve it 
+            reqDict[req[0]].update(req[1])
+        
+        
+        
+        return reqDict
+        
+        
+        
+        #This is the range from 0 to n-1
+        for x in range(numCourses-1):
+            node = Node(x)
+            
+        
+print(Solution.canFinish(Solution,6,[[0,1],[1,2],[0,2]]))
