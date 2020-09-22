@@ -32,7 +32,6 @@ class MedianFinder:
                 start = int((len(self.stack)/2)-1)
                 end = int((len(self.stack)/2))
                 return[start,end]
-        
         else:
             return None
         return size
